@@ -1,0 +1,19 @@
+*.swp
+*.swo
+*.swn
+*~
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+.env
+db.sqlite3
+### Python ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# C extensions
+*.so
