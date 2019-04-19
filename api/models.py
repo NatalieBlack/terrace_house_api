@@ -9,8 +9,10 @@ class Series(models.Model):
         return self.name
 
 class Member(models.Model):
-    name_en = models.CharField(max_length=255)
-    name_jp = models.CharField(max_length=255)
+    full_name_en = models.CharField(max_length=255)
+    nickname_en = models.CharField(max_length=255)
+    full_name_jp = models.CharField(max_length=255)
+    nickname_jp = models.CharField(max_length=255)
     series = models.ForeignKey(Series, on_delete=models.CASCADE)
     start_week = models.IntegerField()
     end_week = models.IntegerField()
