@@ -6,7 +6,7 @@ The API base URL is [https://terracehouseapi.herokuapp.com](https://terracehouse
 
 All endpoints output JSON.
 
-* `/members`
-* `/members/:id`
-* `/series`
-* `/series/:id`
+* GET `/members`
+* GET `/members/:id`
+* GET `/series`
+* GET `/series/:id`
