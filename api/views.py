@@ -5,7 +5,7 @@ from api.serializers import MemberSerializer, SeriesSerializer
 
 class MemberViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that displays complete collection of members.
     """
     queryset = Member.objects.all()
     serializer_class = MemberSerializer
@@ -14,7 +14,7 @@ class MemberViewSet(viewsets.ModelViewSet):
 
 class SeriesViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that displays complete collection of series.
     """
     queryset = Series.objects.all()
     serializer_class = SeriesSerializer
