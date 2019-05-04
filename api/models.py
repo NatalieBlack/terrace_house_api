@@ -15,6 +15,9 @@ class Member(models.Model):
     nickname_jp = models.CharField(max_length=255)
     series = models.ManyToManyField(Series, through='Residency', related_name='members')
 
+    def __str__(self):
+        return f"{self.full_name_en} / {self.full_name_jp}"
+
 class Residency(models.Model):
     member = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='residencies')
     series = models.ForeignKey(Series, on_delete=models.CASCADE, related_name='residencies')
