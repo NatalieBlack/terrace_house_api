@@ -1,8 +1,16 @@
-from api.models import Member, Series
+from api.models import Member, Series, Residency
 from rest_framework import viewsets, permissions
-from api.serializers import MemberSerializer, SeriesSerializer
+from api.serializers import MemberSerializer, SeriesSerializer, ResidencySerializer
 
 
+class ResidencyViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that displays complete collection of member residencies.
+    """
+    queryset = Residency.objects.all()
+    serializer_class = ResidencySerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    
 class MemberViewSet(viewsets.ModelViewSet):
     """
     API endpoint that displays complete collection of members.

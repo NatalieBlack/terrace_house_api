@@ -20,6 +20,7 @@ from api import views
 router = routers.DefaultRouter()
 router.register(r'members', views.MemberViewSet)
 router.register(r'series', views.SeriesViewSet)
+router.register(r'residencies', views.ResidencyViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
