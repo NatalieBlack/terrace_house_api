@@ -8,17 +8,11 @@ class SeriesSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'name', 'number')
 
 class ResidencySerializer(serializers.HyperlinkedModelSerializer):
-    series = serializers.HyperlinkedRelatedField(
-        read_only=True,
-        view_name='series-detail'
-    )
-    
     class Meta:
         model = Residency 
-        fields = ('id', 'start_week', 'end_week', 'series')
+        fields = ('id', 'start_week', 'end_week', 'series', 'member')
 
 class MemberSerializer(serializers.HyperlinkedModelSerializer):
-    residencies = ResidencySerializer(many=True, read_only=True)
 
     class Meta:
         model = Member 
